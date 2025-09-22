@@ -440,7 +440,7 @@ ol.static-org-chart .staff_card+div {
     }
 
     ol.static-org-chart>li>div:first-of-type:not(:only-of-type):after {
-        left: calc(50% + 3px);
+        left: calc(10% + 3px);
     }
 
     ol.static-org-chart>li>div:last-of-type:not(:only-of-type):after {
@@ -536,3 +536,4 @@ ol.static-org-chart .staff_card+div {
         height: 100%;
     }
 }
+

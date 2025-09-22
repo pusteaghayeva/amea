@@ -159,11 +159,11 @@
         display: block;
     }
 
-    #first li:first-child::after {
+   .teai #first li:first-child::after {
         display: none !important;
     }
 
-    #first li:first-child+li::after {
+  .teai  #first li:first-child+li::after {
         height: 3px;
         left: 50%;
         top: 0;
