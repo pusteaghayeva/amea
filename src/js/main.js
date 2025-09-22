@@ -324,3 +324,21 @@ document.querySelectorAll('.modal').forEach(modal => {
     });
 
     // news
+// more read
+document.querySelectorAll(".management-more-btn").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+        const text = btn.previousElementSibling;
+        const icon = btn.querySelector(".management-more-icon");
+
+        if (text.style.maxHeight) {
+            // Bağlamaq üçün
+            text.style.maxHeight = null;
+            btn.querySelector(".caption-more").innerHTML = `Ətraflı <span class="management-more-icon">${icon.innerHTML}</span>`;
+        } else {
+            // Açmaq üçün
+            text.style.maxHeight = text.scrollHeight + "px";
+            btn.querySelector(".caption-more").innerHTML = `Gizlət <span class="management-more-icon">${icon.innerHTML}</span>`;
+        }
+    });
+});
+

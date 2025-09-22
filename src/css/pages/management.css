@@ -1,38 +1,36 @@
 .management {
     margin: 80px 0;
+    font-family: var(--fontMulish);
 }
 
 .contact-sidebar {
     padding-top: 80px;
     padding-bottom: 50px;
-    border-right: 4px solid rgba(151, 151, 151, 0.4);
 }
 
-.contact-sidebar ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 4px;
-    margin-bottom: 30px;
+.board-directors-blog {
+    margin-bottom: 80px;
 }
 
 .contact-sidebar ul li {
-    margin: 18px 0 18px 48px;
+    margin: 18px 0 18px 0;
     font-size: 36px;
     font-weight: 700;
     color: var(--aboutMore);
-    position: relative; /* pseudo-element üçün vacibdir */
+    position: relative;
 }
 
-.contact-sidebar ul li a {
+.contact-sidebar ul li .management-sidebar-link {
     color: var(--aboutMore);
     text-decoration: none;
 }
 
-.contact-sidebar ul li a:hover {
+
+.contact-sidebar ul li .management-sidebar-link:hover {
     color: var(--accordionName);
 }
 
-.contact-sidebar ul li a:before {
+.contact-sidebar ul li .management-sidebar-link:before {
     content: "";
     width: 4px;
     height: 20px;
@@ -44,24 +42,18 @@
     transition: 0.5s;
 }
 
-.contact-sidebar ul li a:hover:before,
+.contact-sidebar ul li .management-sidebar-link:hover:before,
 .contact-sidebar ul li .active:before {
     display: block;
 }
 
-.contact-sidebar ul li .active {
-    color: var(--accordionName);
-}
-.management-blog {
-    border-bottom: 2px solid var(--singleNewsDate);
-    padding-top: .5rem;
-    padding-bottom: 5rem;
-    border-bottom: 3px solid #e0e0e0;
-    margin-bottom: 1.2rem;
+.contact-sidebar ul li .management-sidebar-link.active {
+    color: rgb(4, 142, 92);
 }
 
+
 .management-blog:last-child {
-    border-bottom: none;
+    border: none;
 }
 
 .management-img {
@@ -73,8 +65,7 @@
 
 .management-name {
     text-align: center;
-    text-align: center;
-    color: #153946;
+    color: var(--aboutMore);
     font-weight: 800;
     font-size: 40px;
     margin: 10px 0 5px;
@@ -91,17 +82,212 @@
 .management-right {
     color: var(--singleNewsDate);
     text-align: justify;
+    margin: 0 45px 0 0;
+    font-weight: 500;
+    font-size: 20px;
 }
 
-@media screen and (max-width:992px) {
+.management-about {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--aboutMore);
+    margin-bottom: 15px;
+}
+
+.caption-more {
+    position: relative;
+    cursor: pointer;
+    color: var(--aboutColor);
+    font-weight: 700;
+    font-size: 24px;
+    user-select: none;
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--fontMulish);
+    display: inline-block;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 6px 25px;
+    text-align: center;
+    margin: 52px 0;
+}
+
+.caption-more::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--aboutColor);
+    transition: width 0.4s ease;
+}
+
+.caption-more:hover::after {
+    width: 100%;
+}
+
+.management-more-btn {
+    display: inline-block;
+    float: right;
+    width: auto;
+    text-align: right;
+}
+
+.management-content {
+    max-height: 325px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.management-content.open {
+    max-height: 900px;
+}
+
+.management-blog {
+    /* margin-bottom: 100px; */
+    /* border-left: 4px solid red; */
+    /* border-left: 4px solid rgba(151, 151, 151, 0.4); */
+
+}
+
+.members_content {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--blackColor);
+}
+
+@media screen and (max-width: 1200px) and (min-width:768px) {
+    .contact-sidebar ul li .management-sidebar-link {
+        margin: 10px auto;
+        font-size: 26px;
+    }
+
+    .contact-sidebar ul li {
+        margin: 18px 0 0px 0px;
+    }
+
+    .management-name {
+        font-size: 26px;
+    }
+
+    .management-about {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .management {
+        margin: 35px 0;
+    }
+
     .management-img {
-        /* width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block; */
         width: 100%;
-        height: 388px;
+        height: auto;
         object-fit: contain;
     }
 
+    .contact-sidebar {
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .contact-sidebar ul li {
+        margin: 10px auto;
+        font-size: 26px;
+    }
+
+    .management-name {
+        font-size: 26px;
+    }
+
+    .management-about {
+        text-align: center;
+    }
+
+    .management-right {
+        margin: 0 auto;
+    }
+
+    .management-blog {
+        margin-bottom: 20px;
+    }
+
+    .members_content {
+        font-size: 18px;
+    }
+
+}
+
+.board-directors-col {
+    margin: 20px 0;
+    padding: 10px 0;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.board-directors-col:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.board-directors-a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+.board-directors-img {
+    /* width: 85%; */
+    width: 245px;
+    height: 245px;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.board-directors-col:hover .board-directors-img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.board-directors-name {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 16px 0 7px 0;
+    color: var(--aboutMore);
+    transition: color 0.3s ease;
+}
+
+.board-directors-duty {
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--collabratorDutyColor);
+    padding: 5px;
+}
+
+.board-directors-col:hover .board-directors-name {
+    color: var(--accordionName);
+}
+
+@media (max-width:1200px) {
+    .board-directors-img {
+        width: 100%;
+    }
+}
+
+.management-blog {
+    margin-bottom: 100px;
+}
+
+/* Yalnız birinciyə border-left ver */
+.management-blog:first-child {
+    border-left: 4px solid rgba(151, 151, 151, 0.4);
+    padding-left: 20px;
+    /* xəttlə mətn arası məsafə */
 }
