@@ -1,0 +1,20 @@
+@import url('./font.css');
+@import url('./variable.css');
+
+/* layout */
+@import url('./layout/header.css');
+@import url('./layout/footer.css');
+
+
+/* pages */
+@import url('./pages/main.css');
+@import url('./pages/structure.css');
+@import url('./pages/apparatus_structure.css');
+@import url('./pages/teai.css');
+@import url('./pages/idei.css');
+@import url('./pages/manuscripts_fund.css');
+@import url('./pages/contact.css');
+@import url('./pages/organizations_councils.css');
+@import url('./pages/news.css');
+@import url('./pages/publications.css');
+@import url('./pages/publications_single.css');

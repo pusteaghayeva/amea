@@ -1,0 +1,53 @@
+.contact {
+    margin: 80px 0 200px;
+}
+
+.contact-information {
+    color: var(--newsDateColor);
+    font-family: var(--fontMulish);
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.contact-flex {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contact-flex-img {
+    width: 36px;
+    height: 36px;
+}
+
+.contact-flex-link {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--newsDateColor);
+    margin-left: 15px;
+}
+
+.contact-address {
+    margin: 33px 0;
+}
+
+.contact-address-text {
+    font-weight: 900;
+    font-size: 20px;
+    color: var(--newsDateColor);
+}
+
+@media (max-width: 768px) {
+    .contact {
+        margin: 40px 0 80px;
+    }
+
+    .contact-flex-img {
+        width: 26px;
+        height: 26px;
+    }
+
+    .contact-flex-link {
+        font-size: 18px;
+    }
+}

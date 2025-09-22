@@ -1,0 +1,22 @@
+:root {
+    --headerBg: rgba(1, 50, 32, 1);
+    --dateColor: rgba(255, 255, 255, 1);
+    --timeColor: #809990;
+    --searchColor: rgba(151, 151, 151, 1);
+    --fontMulish: "Mulish", sans-serif;
+    --fontPoppins: "Poppins", sans-serif;
+    --blackColor: rgba(0, 0, 0, 1);
+    --aboutMore: rgba(1, 50, 32, 1);
+    --newsTitleColor: rgba(47, 47, 47, 1);
+    --newsDateColor: rgba(128, 128, 128, 1);
+    --iconBg: #013220;
+    --announcementColor: #000000;
+    --announcementWhite: #fff;
+    --projectsBg: #FFFFFF80;
+    --fontRoboto: "Roboto", sans-serif;
+    --publicationType: #2F2F2F;
+    --linkColor: rgba(47, 47, 47, 1);
+    --structureBg: rgba(245, 242, 242, 1);
+    --collabratorDutyColor: rgba(109, 109, 109, 1);
+    --singlePublicationBg: rgba(245, 245, 245, 1);
+}

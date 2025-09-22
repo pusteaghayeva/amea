@@ -1,0 +1,138 @@
+.single-publication {
+    margin: 80px 0;
+}
+
+.single-publication-blog {
+    background-color: var(--singlePublicationBg);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 56px 69px;
+    margin: 20px 0;
+}
+
+.single-publication-blog-img {
+    width: 225px;
+    height: 335px;
+    object-fit: cover;
+}
+
+.single-publication-blog-content {
+    margin-left: 28px;
+}
+
+.single-publication-blog-title {
+    font-weight: 800;
+    font-size: 36px;
+    color: var(--aboutMore);
+}
+
+.single-publication-blog-text {
+    margin: 40px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--blackColor);
+
+}
+
+.publication-link {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+
+
+
+.single-publication-blog {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.single-publication-blog:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.single-publication-blog {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.single-publication-blog::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: var(--iconBg);
+    transition: width 0.3s ease;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+.single-publication-blog:hover::before {
+    width: 6px;
+}
+
+.single-publication-blog-img {
+    transition: transform 0.4s ease;
+}
+
+.single-publication-blog:hover .single-publication-blog-img {
+    transform: scale(1.05);
+}
+
+.single-publication-blog-title {
+    transition: color 0.3s ease;
+}
+
+.single-publication-blog:hover .single-publication-blog-title {
+    color: var(--iconBg);
+}
+
+@media (max-width: 992px) {
+    .single-publication-blog {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .single-publication-blog-img {
+        width: 180px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .single-publication-blog-content {
+        margin-left: 0;
+    }
+
+    .single-publication-blog-title {
+        font-size: 28px;
+    }
+
+    .single-publication-blog-text {
+        font-size: 18px;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .single-publication-blog {
+        padding: 20px 15px;
+    }
+
+    .single-publication-blog-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .single-publication-blog-title {
+        font-size: 22px;
+    }
+
+    .single-publication-blog-text {
+        font-size: 16px;
+    }
+}
