@@ -1,3 +1,5 @@
+
+
 // Sticky navbar
 // =========================
 $(document).ready(function () {
@@ -380,4 +382,3 @@ document.querySelectorAll(".management-more-btn").forEach(function (btn) {
     }
   });
 });
-

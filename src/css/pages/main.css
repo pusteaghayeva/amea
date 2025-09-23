@@ -742,8 +742,33 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
+.projects-item:hover {
+    transform: scale(1.05);
+    border-radius: 12px;
+}
+
+
+
+.projects-item:hover .projects-text {
+    transform: translateY(-8px);
+    color: rgb(219, 207, 207);
+}
+
+.project-item-abs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    z-index: 4;
+}
 
 .projects-item-bg {
     padding: 25.5px;
@@ -757,10 +782,20 @@ body {
 .projects-icon {
     width: 52px;
     height: 52px;
+    transition: transform 0.4s ease;
+
+}
+
+.projects-item:hover .projects-icon {
+    transform: rotate(5deg) scale(1.2);
 }
 
 .projects-text {
     color: var(--announcementWhite);
+    transition: transform 0.3s ease;
+    height: 120px;
+    background-color: red;
+
 }
 
 .project-title {
@@ -776,6 +811,10 @@ body {
     font-size: 15px;
 }
 
+
+
+
+/* project end */
 /* publications */
 .publications {
     position: relative;
@@ -1190,6 +1229,10 @@ element.style {
     .post-slide .post-content {
         padding: 0px 15px 25px 15px;
     }
+        .projects-text{
+        height: auto;
+        background-color: pink;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1238,6 +1281,10 @@ element.style {
     .scientific-collaborators-title {
         font-size: 32px;
         margin: 25px 0;
+    }
+    .projects-text{
+        height: auto;
+        background-color: yellow;
     }
 }
 
