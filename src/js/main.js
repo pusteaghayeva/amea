@@ -64,6 +64,45 @@ $(window).on("load resize", function () {
 });
 
 // Dropdown navbar HOVER End
+// time
+$(document).ready(() => {
+
+  function AddZero(num) {
+    return num >= 0 && num < 10 ? "0" + num : num + "";
+  }
+
+  function getTime() {
+    var now = new Date();
+    var strDateTime = [
+      [AddZero(now.getHours()), AddZero(now.getMinutes())].join(":"),
+    ];
+    document.getElementById("time").innerHTML = strDateTime;
+  }
+
+  getTime();
+
+  setInterval(() => {
+    getTime();
+  }, 1000);
+
+  const backToTop = $('#backToTop')
+  const amountScrolled = 300
+
+  $(window).scroll(() => {
+    $(window).scrollTop() >= amountScrolled
+      ? backToTop.fadeIn('fast')
+      : backToTop.fadeOut('fast')
+  })
+
+  backToTop.click(() => {
+    $('body, html').animate({
+      scrollTop: 0
+    }, 600)
+    return false
+  })
+})
+
+// time end
 
 // back to top
 var btn = $('#button');
@@ -84,17 +123,17 @@ btn.on('click', function (e) {
 
 // xeberlers
 
-$(document).ready(function() {
-    $("#news-slider").owlCarousel({
-        items : 3,
-        // itemsDesktop:[1199,3],
-        // itemsDesktopSmall:[980,2],
-        // itemsMobile : [600,1],
-        navigation:true,
-        navigationText:["",""],
-        pagination:true,
-        autoPlay:true,
-        responsive: {
+$(document).ready(function () {
+  $("#news-slider").owlCarousel({
+    items: 3,
+    // itemsDesktop:[1199,3],
+    // itemsDesktopSmall:[980,2],
+    // itemsMobile : [600,1],
+    navigation: true,
+    navigationText: ["", ""],
+    pagination: true,
+    autoPlay: true,
+    responsive: {
       0: {
         items: 1
       },
@@ -106,18 +145,18 @@ $(document).ready(function() {
       }
     }
   });
-    });
+});
 // });
 
 // elanlar
-$(document).ready(function() {
-    $("#owl-demo").owlCarousel({
-        items : 4,
-        navigation:true,
-        navigationText:["",""],
-        pagination:true,
-        autoPlay:true,
-        responsive: {
+$(document).ready(function () {
+  $("#owl-demo").owlCarousel({
+    items: 4,
+    navigation: true,
+    navigationText: ["", ""],
+    pagination: true,
+    autoPlay: true,
+    responsive: {
       0: {
         items: 1
       },
@@ -126,87 +165,23 @@ $(document).ready(function() {
       },
       1000: {
         items: 3
-      }, 
-      1200:{
+      },
+      1200: {
         items: 4
       }
     }
   });
-    });
-
-    // 3
-$(document).ready(function() {
-    $("#owl-carousel2").owlCarousel({
-        items : 3,
-        navigation:true,
-        navigationText:["",""],
-        pagination:true,
-        autoPlay:true,
-        responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      1000: {
-        items: 2
-      }, 
-      1200: {
-        items: 3
-      }
-    }
-  });
-    });
-
-    // statistics
-document.addEventListener("DOMContentLoaded", function () {
-    const speed = 200;
-    const statisticsNumbers = document.querySelectorAll('.statistics-number');
-    const animateNumbers = entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const target = entry.target;
-                const updateCount = () => {
-                    const targetNumber = +target.innerText;
-                    const increment = targetNumber / speed;
-
-                    let count = 0;
-
-                    const animate = () => {
-                        count += increment;
-                        if (count < targetNumber) {
-                            target.innerText = Math.floor(count);
-                            requestAnimationFrame(animate);
-                        } else {
-                            target.innerText = targetNumber;
-                        }
-                    };
-                    animate();
-                };
-                updateCount();
-                observer.unobserve(target);
-            }
-        });
-    };
-
-    const observer = new IntersectionObserver(animateNumbers, {
-        threshold: 1.0
-    });
-
-    statisticsNumbers.forEach(number => {
-        observer.observe(number);
-    });
 });
 
-$(document).ready(function() {
-    $("#owl-carousel3").owlCarousel({
-        items : 7,
-        navigation:true,
-        navigationText:["",""],
-        pagination:true,
-        autoPlay:true,
-        responsive: {
+// 3
+$(document).ready(function () {
+  $("#owl-carousel2").owlCarousel({
+    items: 3,
+    navigation: true,
+    navigationText: ["", ""],
+    pagination: true,
+    autoPlay: true,
+    responsive: {
       0: {
         items: 1
       },
@@ -215,22 +190,62 @@ $(document).ready(function() {
       },
       1000: {
         items: 2
-      }, 
+      },
       1200: {
         items: 3
       }
     }
   });
-    });
+});
 
-    $(document).ready(function() {
-    $("#owl-carousel4").owlCarousel({
-        items : 4,
-        navigation:true,
-        navigationText:["",""],
-        pagination:true,
-        autoPlay:true,
-        responsive: {
+// statistics
+document.addEventListener("DOMContentLoaded", function () {
+  const speed = 200;
+  const statisticsNumbers = document.querySelectorAll('.statistics-number');
+  const animateNumbers = entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        const updateCount = () => {
+          const targetNumber = +target.innerText;
+          const increment = targetNumber / speed;
+
+          let count = 0;
+
+          const animate = () => {
+            count += increment;
+            if (count < targetNumber) {
+              target.innerText = Math.floor(count);
+              requestAnimationFrame(animate);
+            } else {
+              target.innerText = targetNumber;
+            }
+          };
+          animate();
+        };
+        updateCount();
+        observer.unobserve(target);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(animateNumbers, {
+    threshold: 1.0
+  });
+
+  statisticsNumbers.forEach(number => {
+    observer.observe(number);
+  });
+});
+
+$(document).ready(function () {
+  $("#owl-carousel3").owlCarousel({
+    items: 7,
+    navigation: true,
+    navigationText: ["", ""],
+    pagination: true,
+    autoPlay: true,
+    responsive: {
       0: {
         items: 1
       },
@@ -239,54 +254,78 @@ $(document).ready(function() {
       },
       1000: {
         items: 2
-      }, 
+      },
       1200: {
         items: 3
       }
     }
   });
-    });
+});
+
+$(document).ready(function () {
+  $("#owl-carousel4").owlCarousel({
+    items: 4,
+    navigation: true,
+    navigationText: ["", ""],
+    pagination: true,
+    autoPlay: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 2
+      },
+      1200: {
+        items: 3
+      }
+    }
+  });
+});
 
 
-    // faydali link
+// faydali link
 var Lowl = $("#owl-demos");
 Lowl.owlCarousel({
-     items : 4,
-        navigation:true,
-        navigationText:["",""],
-        pagination:true,
-        autoPlay:true,
-        responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      1000: {
-        items: 3
-      }, 
-      1200: {
-        items: 3
-      }
+  items: 4,
+  navigation: true,
+  navigationText: ["", ""],
+  pagination: true,
+  autoPlay: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3
+    },
+    1200: {
+      items: 3
     }
+  }
 
-    
+
 });
 // modal copy
 document.querySelectorAll(".modal-other-contact").forEach(contact => {
-    const link = contact.querySelector(".modal-other-phone");
-    const copyBtn = contact.querySelector(".modal-other-img-copy");
+  const link = contact.querySelector(".modal-other-phone");
+  const copyBtn = contact.querySelector(".modal-other-img-copy");
 
-    if (copyBtn && link) {
-        copyBtn.addEventListener("click", () => {
-            const text = link.textContent.trim();
+  if (copyBtn && link) {
+    copyBtn.addEventListener("click", () => {
+      const text = link.textContent.trim();
 
-            navigator.clipboard.writeText(text).catch(err => {
-                console.error("Kopyalama alınmadı:", err);
-            });
-        });
-    }
+      navigator.clipboard.writeText(text).catch(err => {
+        console.error("Kopyalama alınmadı:", err);
+      });
+    });
+  }
 });
 
 
@@ -298,15 +337,15 @@ document.querySelectorAll('.modal').forEach(modal => {
   });
 });
 
-    $(document).ready(function() {
-    $("#owl-carousel-organization").owlCarousel({
-        items : 4,
-        navigation:true,
-        navigationText:["",""],
-        pagination:true,
-        autoPlay:true,
-        loop:true,
-        responsive: {
+$(document).ready(function () {
+  $("#owl-carousel-organization").owlCarousel({
+    items: 4,
+    navigation: true,
+    navigationText: ["", ""],
+    pagination: true,
+    autoPlay: true,
+    loop: true,
+    responsive: {
       0: {
         items: 1
       },
@@ -315,30 +354,30 @@ document.querySelectorAll('.modal').forEach(modal => {
       },
       1000: {
         items: 2
-      }, 
+      },
       1200: {
         items: 3
       }
     }
   });
-    });
+});
 
-    // news
+// news
 // more read
-document.querySelectorAll(".management-more-btn").forEach(function(btn) {
-    btn.addEventListener("click", function() {
-        const text = btn.previousElementSibling;
-        const icon = btn.querySelector(".management-more-icon");
+document.querySelectorAll(".management-more-btn").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    const text = btn.previousElementSibling;
+    const icon = btn.querySelector(".management-more-icon");
 
-        if (text.style.maxHeight) {
-            // Bağlamaq üçün
-            text.style.maxHeight = null;
-            btn.querySelector(".caption-more").innerHTML = `Ətraflı <span class="management-more-icon">${icon.innerHTML}</span>`;
-        } else {
-            // Açmaq üçün
-            text.style.maxHeight = text.scrollHeight + "px";
-            btn.querySelector(".caption-more").innerHTML = `Gizlət <span class="management-more-icon">${icon.innerHTML}</span>`;
-        }
-    });
+    if (text.style.maxHeight) {
+      // Bağlamaq üçün
+      text.style.maxHeight = null;
+      btn.querySelector(".caption-more").innerHTML = `Ətraflı <span class="management-more-icon">${icon.innerHTML}</span>`;
+    } else {
+      // Açmaq üçün
+      text.style.maxHeight = text.scrollHeight + "px";
+      btn.querySelector(".caption-more").innerHTML = `Gizlət <span class="management-more-icon">${icon.innerHTML}</span>`;
+    }
+  });
 });
 

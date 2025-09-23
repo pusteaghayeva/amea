@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }
@@ -215,6 +216,10 @@ ol.static-org-chart .staff_card .staff_title_first {
     color: var(--dateColor);
 }
 
+ol.static-org-chart .staff_card .staff_title_first a {
+    color: var(--dateColor);
+}
+
 
 ol.static-org-chart .staff_title {
     height: 121px;
@@ -278,16 +283,18 @@ ol.static-org-chart .staff_card+div {
 
 /*** MEDIA QUERIES ***/
 @media only screen and (max-width: 992px) {
-    .structure{
+    .structure {
         margin: 20px 0;
     }
-    .structure-main-title{
+
+    .structure-main-title {
         height: auto;
         width: 100%;
         padding: 15px;
         font-size: 24px;
         margin: 12px 0;
     }
+
     #first {
         padding-top: 1em;
         margin: 0 auto;
@@ -536,4 +543,3 @@ ol.static-org-chart .staff_card+div {
         height: 100%;
     }
 }
-
