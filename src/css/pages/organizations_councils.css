@@ -28,7 +28,7 @@
 }
 
 .organization-img {
-    width: 56px;
+    width: 56px !important;
     height: 56px;
     margin-bottom: 40px;
     object-fit: cover;
@@ -47,22 +47,6 @@
     transition: all 0.3s ease;
 }
 
-/* .organization-item:hover {
-    background-color: var(--collabratorDutyColor);
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-} */
-
-/* .organization-item:hover .organization-img {
-    filter: grayscale(100%) brightness(200%);
-    transform: scale(1.2);
-    transition: all 0.3s ease;
-} */
-
-/* .organization-item:hover .organization-name {
-    color: #fff;
-} */
-
 .owl-carousel-organization .item {
     position: relative;
     display: flex;
@@ -74,7 +58,6 @@
     border-radius: 8px;
     background-color: var(--aboutMore);
     overflow: hidden;
-    /* hover zamanı border-radius qorunur */
 }
 
 
@@ -95,7 +78,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* width: 245px; */
     width: 90%;
     height: 292px;
     border-radius: 8px;
@@ -121,7 +103,6 @@
 
 .organization-item:hover {
     transform: translateY(-2px) scale(1.05);
-    /* yuxarı qalxır və böyüyür */
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
     background: linear-gradient(135deg, rgba(1, 50, 32, 1), rgba(0, 100, 70, 1));
     transition: all 0.4s ease;
@@ -150,4 +131,11 @@
         width: 95%;
     }
 
+}
+
+.owl-dots, .owl-nav{
+    display: none;
+}
+.organization-councils-main-title{
+    text-align: center ;
 }

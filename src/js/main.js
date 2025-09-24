@@ -123,83 +123,6 @@ btn.on('click', function (e) {
 });
 
 
-// xeberlers
-
-$(document).ready(function () {
-  $("#news-slider").owlCarousel({
-    items: 3,
-    // itemsDesktop:[1199,3],
-    // itemsDesktopSmall:[980,2],
-    // itemsMobile : [600,1],
-    navigation: true,
-    navigationText: ["", ""],
-    pagination: true,
-    autoPlay: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 3
-      },
-      1000: {
-        items: 3
-      }
-    }
-  });
-});
-// });
-
-// elanlar
-$(document).ready(function () {
-  $("#owl-demo").owlCarousel({
-    items: 4,
-    navigation: true,
-    navigationText: ["", ""],
-    pagination: true,
-    autoPlay: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 3
-      },
-      1000: {
-        items: 3
-      },
-      1200: {
-        items: 4
-      }
-    }
-  });
-});
-
-// 3
-$(document).ready(function () {
-  $("#owl-carousel2").owlCarousel({
-    items: 3,
-    navigation: true,
-    navigationText: ["", ""],
-    pagination: true,
-    autoPlay: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      1000: {
-        items: 2
-      },
-      1200: {
-        items: 3
-      }
-    }
-  });
-});
-
 // statistics
 document.addEventListener("DOMContentLoaded", function () {
   const speed = 200;
@@ -240,80 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-$(document).ready(function () {
-  $("#owl-carousel3").owlCarousel({
-    items: 7,
-    navigation: true,
-    navigationText: ["", ""],
-    pagination: true,
-    autoPlay: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      1000: {
-        items: 2
-      },
-      1200: {
-        items: 3
-      }
-    }
-  });
-});
 
-$(document).ready(function () {
-  $("#owl-carousel4").owlCarousel({
-    items: 4,
-    navigation: true,
-    navigationText: ["", ""],
-    pagination: true,
-    autoPlay: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      1000: {
-        items: 2
-      },
-      1200: {
-        items: 3
-      }
-    }
-  });
-});
-
-
-// faydali link
-var Lowl = $("#owl-demos");
-Lowl.owlCarousel({
-  items: 4,
-  navigation: true,
-  navigationText: ["", ""],
-  pagination: true,
-  autoPlay: true,
-  responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 2
-    },
-    1000: {
-      items: 3
-    },
-    1200: {
-      items: 3
-    }
-  }
-
-
-});
 // modal copy
 document.querySelectorAll(".modal-other-contact").forEach(contact => {
   const link = contact.querySelector(".modal-other-phone");
@@ -339,31 +189,6 @@ document.querySelectorAll('.modal').forEach(modal => {
   });
 });
 
-$(document).ready(function () {
-  $("#owl-carousel-organization").owlCarousel({
-    items: 4,
-    navigation: true,
-    navigationText: ["", ""],
-    pagination: true,
-    autoPlay: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      1000: {
-        items: 2
-      },
-      1200: {
-        items: 3
-      }
-    }
-  });
-});
-
 // news
 // more read
 document.querySelectorAll(".management-more-btn").forEach(function (btn) {
@@ -379,6 +204,160 @@ document.querySelectorAll(".management-more-btn").forEach(function (btn) {
       // Açmaq üçün
       text.style.maxHeight = text.scrollHeight + "px";
       btn.querySelector(".caption-more").innerHTML = `Gizlət <span class="management-more-icon">${icon.innerHTML}</span>`;
+    }
+  });
+});
+
+
+// news-slider
+
+$("#news-slider").owlCarousel({
+  loop: false,
+  autoplay: false,
+  responsiveClass: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    840: {
+      items: 2
+    },
+    1024: {
+      items: 3
+    },
+    1200: {
+      items: 3
+    },
+    1400: {
+      items: 3
+    }
+  }
+});
+// elanlar
+$("#owl-demo").owlCarousel({
+  loop: false,
+  autoplay: false,
+  responsiveClass: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    840: {
+      items: 2
+    },
+    1024: {
+      items: 3
+    },
+    1200: {
+      items: 3
+    },
+    1400: {
+      items: 4
+    }
+  }
+});
+// elmi emekdaslar
+$("#owl-carousel3").owlCarousel({
+  loop: false,
+  autoplay: false,
+  responsiveClass: true,
+  nav: false,
+  dots: false,
+  responsive:
+  {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    840: {
+      items: 3
+    },
+    1024: {
+      items: 4
+    },
+    1200: {
+      items: 5
+    },
+    1400: {
+      items: 7
+    }
+  }
+});
+// projects
+$("#owl-carousel-project").owlCarousel({
+  loop: false,
+  margin: 10,
+  autoplay: false,
+  responsiveClass: true,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    840: {
+      items: 2
+    },
+    1024: {
+      items: 2
+    },
+    1200: {
+      items: 3
+    },
+    1400: {
+      items: 3
+    }
+  }
+});
+// useful-links
+$(document).ready(function () {
+  $("#owl-carousel4").owlCarousel({
+    items: 4,
+    pagination: true,
+    autoPlay: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      },
+      1200: {
+        items: 4
+      }
+    }
+  });
+});
+
+$(document).ready(function () {
+  $("#owl-carousel-organization").owlCarousel({
+    items: 4,
+    autoPlay: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 2
+      },
+      1000: {
+        items: 3
+      },
+      1200: {
+        items: 4
+      }
     }
   });
 });

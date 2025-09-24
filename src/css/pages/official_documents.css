@@ -1,0 +1,24 @@
+.official-document-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.official-documents-blog {
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 25px 0;
+    height: auto;
+    justify-content: flex-start;
+}
+
+.official-documents:hover {
+    transform: scale(1.02);
+}
+
+.official-documents-page {}
+
+.official-documents-title {
+    font-size: 20px;
+}

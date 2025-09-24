@@ -1,4 +1,7 @@
 /*   */
+footer {
+    clear: both;
+}
 
 .footer-section {
     background-color: var(--aboutMore);
