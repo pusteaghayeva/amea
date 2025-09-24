@@ -41,6 +41,52 @@ ul {
     background: var(--menuColor);
 }
 
+
+/* back to top */
+
+#button {
+    display: inline-block;
+    background-color: var(--aboutMore);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 14%;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    border: 1px solid #fff;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: rgb(5, 91, 60);
+}
+
+#button:active {
+    background-color: rgb(8, 85, 57);
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
 header {
     font-family: var(--fontMulish);
 }
@@ -438,9 +484,11 @@ button:focus {
     position: absolute;
     width: 100%;
 }
+
 .dropdown-menu {
     left: 0;
     position: absolute;
     width: 100%;
 }
+
 /* son */
