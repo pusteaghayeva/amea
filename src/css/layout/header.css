@@ -389,7 +389,7 @@ button:focus {
     margin: 0;
 }
 
-.navbar-toggler{
+.navbar-toggler {
     box-sizing: none;
 }
 
@@ -566,8 +566,9 @@ header .navbar-nav {
     -webkit-justify-content: center;
     -moz-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    width: 100%
+    justify-content: flex-start;
+    width: 100%;
+
 }
 
 header .navbar-nav .nav-item {
@@ -654,7 +655,9 @@ header .navbar-nav .nav-link span {
     -o-background-size: cover;
     background-size: cover;
     -webkit-transition: .3s;
-    transition: .3s
+    transition: .3s;
+    background-color: red;
+
 }
 
 @media screen and (max-width: 991px) {
@@ -758,7 +761,7 @@ header .navbar-nav .dropdown-item {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background-position: center
+        background-position: center;
     }
 
     header .navbar-toggler {
