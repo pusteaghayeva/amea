@@ -363,33 +363,99 @@ $(document).ready(function () {
 });
 
 
-// nav
-// Mobil menyuda açıq dropdown-u kliklə bağlamaq
+
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownToggles = document.querySelectorAll(".nav-item.dropdown > a");
+  const toggler = document.querySelector(".navbar-toggler");
+  const collapse = document.getElementById("navbarSupportedContent");
 
-  dropdownToggles.forEach(toggle => {
-    toggle.addEventListener("click", function (e) {
-      e.preventDefault();
-      const parent = this.parentElement;
-      const menu = parent.querySelector(".dropdown-menu");
+  if (!toggler || !collapse) {
+    console.warn("Navbar toggler və ya #navbarSupportedContent tapılmadı.");
+    return;
+  }
 
-      if (menu.classList.contains("show")) {
-        menu.classList.remove("show");
-      } else {
-        document.querySelectorAll(".dropdown-menu.show").forEach(openMenu => {
-          openMenu.classList.remove("show");
-        });
-        menu.classList.add("show");
-      }
+  const isMobile = () => window.matchMedia("(max-width: 991px)").matches;
+
+  // Open / Close funksiyaları
+  function openCollapse() {
+    collapse.classList.add("show");
+    toggler.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+  function closeCollapse() {
+    collapse.classList.remove("show");
+    toggler.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+    // içəridə açıq dropdown-ları bağla
+    collapse.querySelectorAll(".dropdown-menu.show").forEach(m => m.classList.remove("show"));
+    collapse.querySelectorAll(".nav-item.dropdown > a[aria-expanded='true']").forEach(a => a.setAttribute("aria-expanded", "false"));
+  }
+
+  // Toggler click — dərhal aç/bağla, scroll olmadan
+  toggler.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.activeElement?.blur();
+    if (collapse.classList.contains("show")) closeCollapse();
+    else openCollapse();
+  });
+
+  // Nav içində adi linkə klikləyəndə (mobil) menyunu bağla — istəsən çıxara bilərsən
+  collapse.querySelectorAll(".nav-link").forEach(link => {
+    // əgər link dropdown toggle-dursa, onu burda idarə etməyəcəyik
+    if (link.closest(".nav-item.dropdown")) return;
+    link.addEventListener("click", function () {
+      if (isMobile()) closeCollapse();
     });
   });
 
+  // Dropdown toggle-ları (mobil üçün kliklə açılır)
+  collapse.addEventListener("click", function (e) {
+    const toggle = e.target.closest(".nav-item.dropdown > a");
+    if (!toggle) return;
+    if (!isMobile()) return; // desktop üçün mövcud hover davranışı saxla
+
+    e.preventDefault();
+    const parent = toggle.parentElement;
+    const menu = parent.querySelector(".dropdown-menu");
+    if (!menu) return;
+
+    const isOpen = menu.classList.contains("show");
+
+    // digər açıq dropdownları bağla
+    collapse.querySelectorAll(".dropdown-menu.show").forEach(m => {
+      if (m !== menu) {
+        m.classList.remove("show");
+        m.previousElementSibling?.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    if (isOpen) {
+      menu.classList.remove("show");
+      toggle.setAttribute("aria-expanded", "false");
+    } else {
+      menu.classList.add("show");
+      toggle.setAttribute("aria-expanded", "true");
+    }
+  });
+
+  // Səhifənin hara kliklədiyinə görə bağlamaq (toggler və collapse xaricində klik)
   document.addEventListener("click", function (e) {
-    if (!e.target.closest(".nav-item.dropdown")) {
-      document.querySelectorAll(".dropdown-menu.show").forEach(openMenu => {
-        openMenu.classList.remove("show");
-      });
+    if (!e.target.closest("#navbarSupportedContent") && !e.target.closest(".navbar-toggler")) {
+      if (collapse.classList.contains("show")) closeCollapse();
+    }
+  });
+
+  // ESC ilə bağlamaq
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeCollapse();
+  });
+
+  // Resize zamanı desktop-a keçəndə vəziyyəti sıfırla
+  window.addEventListener("resize", function () {
+    if (!isMobile()) {
+      document.body.style.overflow = "";
+      collapse.classList.remove("show");
+      collapse.querySelectorAll(".dropdown-menu.show").forEach(m => m.classList.remove("show"));
+      document.querySelectorAll(".nav-item.dropdown > a[aria-expanded='true']").forEach(link => link.setAttribute("aria-expanded", "false"));
     }
   });
 });

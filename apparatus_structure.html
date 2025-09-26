@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header  header--main ">
         <div class="header-lang">
             <div class="header-bg">
                 <div class="container">
@@ -73,102 +73,79 @@
             </a>
         </div>
 
-        <nav class="navbar navbar-expand-lg top-navbar header-navbar" data-toggle="sticky-onscroll">
+        <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <div class="container">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                    Haqqımızda
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="dinamic.html">Haqqında</a>
-                                    <a class="dropdown-item" href="regulation.html">Əsasnamələr</a>
-                                    <a class="dropdown-item" href="management.html">Rəhbərlik</a>
-                                    <a class="dropdown-item" href="structure.html">Struktur</a>
-                                </div>
-                            </li>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                    Xəbərlər
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="decisions.html">Məcəllələr</a>
-                                    <a class="dropdown-item" href="laws.html">Qanunlar</a>
-                                    <a class="dropdown-item" href="decisions.html">Fərmanlar</a>
-                                    <a class="dropdown-item" href="orders.html">Sərəncamlar</a>
-                                    <a class="dropdown-item" href="decisions.html">Qərarlar</a>
-                                </div>
-                            </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="#" role="button" aria-expanded="false">
+                                Haqqımızda
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./structure.html">Bölmə haqqında</a></li>
+                                <li><a class="dropdown-item" href="#">Rəhbərlik</a></li>
+                                <li><a class="dropdown-item" href="#">Struktur</a></li>
+                                <li><a class="dropdown-item" href="#">İctimai təşkilat və şuralar</a></li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                    Elanlar
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="faq.html">Tez-tez verilən suallar</a>
-                                </div>
-                            </li>
+                            </ul>
+                        </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                    Əlaqələrimiz
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="news.html">Xəbərlər</a>
-                                    <a class="dropdown-item" href="annoncement.html">Elanlar</a>
-                                    <a class="dropdown-item" href="photogallery.html">Fotoqalereya</a>
-                                    <a class="dropdown-item" href="videogallery.html">Videomateriallar</a>
-                                </div>
-                            </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" aria-expanded="false">
+                                Xəbərlər
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Konfranslar</a></li>
+                                <li><a class="dropdown-item" href="#">Tədbirlər</a></li>
+                                <li><a class="dropdown-item" href="#">Nəşrlər</a></li>
+                                <li><a class="dropdown-item" href="#">Yeniliklər</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" aria-expanded="false">
+                                Elanlar
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Layihələr</a></li>
+                                <li><a class="dropdown-item" href="#">Yeniliklər</a></li>
+                                <li><a class="dropdown-item" href="#">Patentlər</a></li>
+                            </ul>
+                        </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                    Nəşrlər
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="online_apply.html">Müraciət etmək</a>
-                                    <a class="dropdown-item" href="dinamic.html">Qəbul qrafiki</a>
-                                </div>
-                            </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                                    Xüsusi
-                                </a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="online_apply.html">Müraciət etmək</a>
-                                    <a class="dropdown-item" href="dinamic.html">Qəbul qrafiki</a>
-                                </div>
-                            </li>
-                            <li>
-                                <form class="form-inline my-2 my-lg-0">
-                                    <button class="btn btn-search my-2 my-sm-0" type="submit">
-                                        <img src="./src/img/btn-search.svg" class="btn-search" alt="" />
-                                    </button>
-                                    <input class="form-control mr-sm-2 form-control-input" type="search"
-                                        placeholder="Axtarış" aria-label="Axtarış" />
-                                </form>
-                            </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" aria-expanded="false">
+                                Nəşrlər
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Monoqrafiya</a></li>
+                                <li><a class="dropdown-item" href="#">Kitab</a></li>
+                                <li><a class="dropdown-item" href="#">Elmi əsərlər</a></li>
+                                <li><a class="dropdown-item" href="#">Axtarışlar</a></li>
+                            </ul>
+                        </li>
 
-                        </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" aria-expanded="false">
+                                Xüsusi
+                            </a>
 
-                        <form class="form-inline my-2 my-lg-0 form-without-nav">
-                            <button class="btn btn-search my-2 my-sm-0" type="submit">
-                                <img src="./src/img/btn-search.svg" class="btn-search" alt="" />
-                            </button>
-                            <input class="form-control mr-sm-2 form-control-input" type="search" placeholder="Axtarış"
-                                aria-label="Axtarış" />
-                        </form>
-                    </div>
+                        </li>
+
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 form-without-nav">
+                        <button class="btn btn-search my-2 my-sm-0" type="submit">
+                            <img src="./src/img/btn-search.svg" class="btn-search" alt="">
+                        </button>
+                        <input class="form-control mr-sm-2 form-control-input" type="search" placeholder="Axtarış"
+                            aria-label="Axtarış">
+                    </form>
                 </div>
             </div>
         </nav>
