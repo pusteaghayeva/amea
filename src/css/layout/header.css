@@ -41,10 +41,8 @@ ul {
     background: var(--menuColor);
 }
 
-/* back to top */
 
 /* back to top */
-
 #button {
     display: inline-block;
     background-color: var(--aboutMore);
@@ -54,7 +52,7 @@ ul {
     border-radius: 4px;
     position: fixed;
     bottom: 30px;
-    right: 14%;
+    right: 3%;
     transition: background-color .3s,
         opacity .5s, visibility .5s;
     opacity: 0;

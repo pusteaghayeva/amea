@@ -36,6 +36,42 @@
 // Sticky navbar end
 
 
+$(document).ready(() => {
+
+    function AddZero(num) {
+        return num >= 0 && num < 10 ? "0" + num : num + "";
+    }
+
+    function getTime() {
+        var now = new Date();
+        var strDateTime = [
+            [AddZero(now.getHours()), AddZero(now.getMinutes())].join(":"),
+        ];
+        document.getElementById("time").innerHTML = strDateTime;
+    }
+
+    getTime();
+
+    setInterval(() => {
+        getTime();
+    }, 1000);
+
+    const backToTop = $('#backToTop')
+    const amountScrolled = 300
+
+    $(window).scroll(() => {
+        $(window).scrollTop() >= amountScrolled
+            ? backToTop.fadeIn('fast')
+            : backToTop.fadeOut('fast')
+    })
+
+    backToTop.click(() => {
+        $('body, html').animate({
+            scrollTop: 0
+        }, 600)
+        return false
+    })
+})
 
 // Dropdown navbar HOVER
 
@@ -165,48 +201,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // modal copy
-document.querySelectorAll(".modal-other-contact").forEach(contact => {
-  const link = contact.querySelector(".modal-other-phone");
-  const copyBtn = contact.querySelector(".modal-other-img-copy");
+// document.querySelectorAll(".modal-other-contact").forEach(contact => {
+//   const link = contact.querySelector(".modal-other-phone");
+//   const copyBtn = contact.querySelector(".modal-other-img-copy");
 
-  if (copyBtn && link) {
-    copyBtn.addEventListener("click", () => {
-      const text = link.textContent.trim();
+//   if (copyBtn && link) {
+//     copyBtn.addEventListener("click", () => {
+//       const text = link.textContent.trim();
 
-      navigator.clipboard.writeText(text).catch(err => {
-        console.error("Kopyalama alınmadı:", err);
-      });
-    });
-  }
-});
+//       navigator.clipboard.writeText(text).catch(err => {
+//         console.error("Kopyalama alınmadı:", err);
+//       });
+//     });
+//   }
+// });
 
 
 
 // border
-document.querySelectorAll('.modal').forEach(modal => {
-  modal.addEventListener('hidden.bs.modal', () => {
-    document.activeElement.blur();
-  });
-});
+// document.querySelectorAll('.modal').forEach(modal => {
+//   modal.addEventListener('hidden.bs.modal', () => {
+//     document.activeElement.blur();
+//   });
+// });
 
 // news
 // more read
-document.querySelectorAll(".management-more-btn").forEach(function (btn) {
-  btn.addEventListener("click", function () {
-    const text = btn.previousElementSibling;
-    const icon = btn.querySelector(".management-more-icon");
+// document.querySelectorAll(".management-more-btn").forEach(function (btn) {
+//   btn.addEventListener("click", function () {
+//     const text = btn.previousElementSibling;
+//     const icon = btn.querySelector(".management-more-icon");
 
-    if (text.style.maxHeight) {
-      // Bağlamaq üçün
-      text.style.maxHeight = null;
-      btn.querySelector(".caption-more").innerHTML = `Ətraflı <span class="management-more-icon">${icon.innerHTML}</span>`;
-    } else {
-      // Açmaq üçün
-      text.style.maxHeight = text.scrollHeight + "px";
-      btn.querySelector(".caption-more").innerHTML = `Gizlət <span class="management-more-icon">${icon.innerHTML}</span>`;
-    }
-  });
-});
+//     if (text.style.maxHeight) {
+//       // Bağlamaq üçün
+//       text.style.maxHeight = null;
+//       btn.querySelector(".caption-more").innerHTML = `Ətraflı <span class="management-more-icon">${icon.innerHTML}</span>`;
+//     } else {
+//       // Açmaq üçün
+//       text.style.maxHeight = text.scrollHeight + "px";
+//       btn.querySelector(".caption-more").innerHTML = `Gizlət <span class="management-more-icon">${icon.innerHTML}</span>`;
+//     }
+//   });
+// });
 
 
 // news-slider

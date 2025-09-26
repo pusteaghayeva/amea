@@ -45,14 +45,7 @@ body {
     z-index: 1;
 }
 
-/* .about-img-right {
-    position: absolute;
-    top: 10%;
-    right: 25%;
-    width: 13%;
-    height: auto;
-    z-index: 2;
-} */
+
 .about-img-right {
     position: absolute;
     top: 15%;
