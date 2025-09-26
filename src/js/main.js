@@ -2,107 +2,107 @@
 
 // Sticky navbar
 // =========================
-$(document).ready(function () {
-  // Custom function which toggles between sticky class (is-sticky)
-  var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
-    var stickyHeight = sticky.outerHeight();
-    var stickyTop = stickyWrapper.offset().top;
-    if (scrollElement.scrollTop() >= stickyTop) {
-      stickyWrapper.height(stickyHeight);
-      sticky.addClass("is-sticky");
-    }
-    else {
-      sticky.removeClass("is-sticky");
-      stickyWrapper.height('auto');
-    }
-  };
+// $(document).ready(function () {
+//   // Custom function which toggles between sticky class (is-sticky)
+//   var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
+//     var stickyHeight = sticky.outerHeight();
+//     var stickyTop = stickyWrapper.offset().top;
+//     if (scrollElement.scrollTop() >= stickyTop) {
+//       stickyWrapper.height(stickyHeight);
+//       sticky.addClass("is-sticky");
+//     }
+//     else {
+//       sticky.removeClass("is-sticky");
+//       stickyWrapper.height('auto');
+//     }
+//   };
 
-  // Find all data-toggle="sticky-onscroll" elements
-  $('[data-toggle="sticky-onscroll"]').each(function () {
-    var sticky = $(this);
-    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
-    sticky.before(stickyWrapper);
-    sticky.addClass('sticky');
+//   // Find all data-toggle="sticky-onscroll" elements
+//   $('[data-toggle="sticky-onscroll"]').each(function () {
+//     var sticky = $(this);
+//     var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+//     sticky.before(stickyWrapper);
+//     sticky.addClass('sticky');
 
-    // Scroll & resize events
-    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
-      stickyToggle(sticky, stickyWrapper, $(this));
-    });
+//     // Scroll & resize events
+//     $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+//       stickyToggle(sticky, stickyWrapper, $(this));
+//     });
 
-    // On page load
-    stickyToggle(sticky, stickyWrapper, $(window));
-  });
-});
+//     // On page load
+//     stickyToggle(sticky, stickyWrapper, $(window));
+//   });
+// });
 // Sticky navbar end
 
 
 
 // Dropdown navbar HOVER
 
-const $dropdown = $(".dropdown");
-const $dropdownToggle = $(".dropdown-toggle");
-const $dropdownMenu = $(".dropdown-menu");
-const showClass = "show";
+// const $dropdown = $(".dropdown");
+// const $dropdownToggle = $(".dropdown-toggle");
+// const $dropdownMenu = $(".dropdown-menu");
+// const showClass = "show";
 
-$(window).on("load resize", function () {
-  if (this.matchMedia("(min-width: 768px)").matches) {
-    $dropdown.hover(
-      function () {
-        const $this = $(this);
-        $this.addClass(showClass);
-        $this.find($dropdownToggle).attr("aria-expanded", "true");
-        $this.find($dropdownMenu).addClass(showClass);
-      },
-      function () {
-        const $this = $(this);
-        $this.removeClass(showClass);
-        $this.find($dropdownToggle).attr("aria-expanded", "false");
-        $this.find($dropdownMenu).removeClass(showClass);
-      }
-    );
-  } else {
-    $dropdown.off("mouseenter mouseleave");
-  }
-});
+// $(window).on("load resize", function () {
+//   if (this.matchMedia("(min-width: 768px)").matches) {
+//     $dropdown.hover(
+//       function () {
+//         const $this = $(this);
+//         $this.addClass(showClass);
+//         $this.find($dropdownToggle).attr("aria-expanded", "true");
+//         $this.find($dropdownMenu).addClass(showClass);
+//       },
+//       function () {
+//         const $this = $(this);
+//         $this.removeClass(showClass);
+//         $this.find($dropdownToggle).attr("aria-expanded", "false");
+//         $this.find($dropdownMenu).removeClass(showClass);
+//       }
+//     );
+//   } else {
+//     $dropdown.off("mouseenter mouseleave");
+//   }
+// });
 
 // Dropdown navbar HOVER End
 // time
-$(document).ready(() => {
+// $(document).ready(() => {
 
-  function AddZero(num) {
-    return num >= 0 && num < 10 ? "0" + num : num + "";
-  }
+//   function AddZero(num) {
+//     return num >= 0 && num < 10 ? "0" + num : num + "";
+//   }
 
-  function getTime() {
-    var now = new Date();
-    var strDateTime = [
-      [AddZero(now.getHours()), AddZero(now.getMinutes())].join(":"),
-    ];
-    document.getElementById("time").innerHTML = strDateTime;
-  }
+//   function getTime() {
+//     var now = new Date();
+//     var strDateTime = [
+//       [AddZero(now.getHours()), AddZero(now.getMinutes())].join(":"),
+//     ];
+//     document.getElementById("time").innerHTML = strDateTime;
+//   }
 
-  getTime();
+//   getTime();
 
-  setInterval(() => {
-    getTime();
-  }, 1000);
+//   setInterval(() => {
+//     getTime();
+//   }, 1000);
 
-  const backToTop = $('#backToTop')
-  const amountScrolled = 300
+//   const backToTop = $('#backToTop')
+//   const amountScrolled = 300
 
-  $(window).scroll(() => {
-    $(window).scrollTop() >= amountScrolled
-      ? backToTop.fadeIn('fast')
-      : backToTop.fadeOut('fast')
-  })
+//   $(window).scroll(() => {
+//     $(window).scrollTop() >= amountScrolled
+//       ? backToTop.fadeIn('fast')
+//       : backToTop.fadeOut('fast')
+//   })
 
-  backToTop.click(() => {
-    $('body, html').animate({
-      scrollTop: 0
-    }, 600)
-    return false
-  })
-})
+//   backToTop.click(() => {
+//     $('body, html').animate({
+//       scrollTop: 0
+//     }, 600)
+//     return false
+//   })
+// })
 
 // time end
 
@@ -358,6 +358,38 @@ $(document).ready(function () {
       1200: {
         items: 4
       }
+    }
+  });
+});
+
+
+// nav
+// Mobil menyuda açıq dropdown-u kliklə bağlamaq
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdownToggles = document.querySelectorAll(".nav-item.dropdown > a");
+
+  dropdownToggles.forEach(toggle => {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      const parent = this.parentElement;
+      const menu = parent.querySelector(".dropdown-menu");
+
+      if (menu.classList.contains("show")) {
+        menu.classList.remove("show");
+      } else {
+        document.querySelectorAll(".dropdown-menu.show").forEach(openMenu => {
+          openMenu.classList.remove("show");
+        });
+        menu.classList.add("show");
+      }
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".nav-item.dropdown")) {
+      document.querySelectorAll(".dropdown-menu.show").forEach(openMenu => {
+        openMenu.classList.remove("show");
+      });
     }
   });
 });

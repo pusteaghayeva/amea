@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./src/img/logo.png" type="image/x-icon" />
+    <title>
+        Azərbaycan Respublikasında Naxçıvan Muxtar Respublikasının Maliyyə Nazirliyi
+    </title>
+    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/css/global.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-lang">
+            <div class="header-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <p class="date-blog">
+                                23 Sentyabr 2025, Çərşənbə axşamı
+                                <span id="time">12:34</span>
+                            </p>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <div class="header-social-icons">
+                                <ul class="header-ul">
+                                    <li class="social">
+                                        <a href="">
+                                            <i class="fa-brands fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social">
+                                        <a href="">
+                                            <i class="fa-brands fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            Əlaqə
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="lang">
+                                            AZ
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="" class="lang">
+                                            EN
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="toolbar">
+            <a href="index.html" class="header-link">
+                <img src="./src/img/header.png" alt="" />
+            </a>
+        </div>
+
+        <!-- <nav class="navbar navbar-expand-lg top-navbar header-navbar" data-toggle="sticky-onscroll">
+            <div class="container">
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown open">
+
+                            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Haqqımızda
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item " href="/page/41/haqqında">BANM haqqında</a>
+                                <a class="dropdown-item " href="/news">Xəbərlər</a>
+                                <a class="dropdown-item " href="/page/20/Logotype">Loqotip təlimatı</a>
+                                <a class="dropdown-item " href="/page/45/Facts and Figures">Faktlar və rəqəmlər</a>
+                                <a class="dropdown-item " href="/page/22/elmar-qasimov">Rəhbərlik</a>
+                                <a class="dropdown-item " href="/page/255/qebul-gunleri">Qəbul günləri</a>
+                                <a class="dropdown-item " href="/page/77/Adminstration">Struktur</a>
+                                <a class="dropdown-item " href="/vacancy">Vakansiyalar</a>
+                                <a class="dropdown-item " href="/page/46/Sustainability">BANM-də davamlılıq</a>
+                                <a class="dropdown-item " href="/page/276/Committee">Komissiyalar</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Xəbərlər
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="decisions.html">Məcəllələr</a>
+                                <a class="dropdown-item" href="laws.html">Qanunlar</a>
+                                <a class="dropdown-item" href="decisions.html">Fərmanlar</a>
+                                <a class="dropdown-item" href="orders.html">Sərəncamlar</a>
+                                <a class="dropdown-item" href="decisions.html">Qərarlar</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Elanlar
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="faq.html">Tez-tez verilən suallar</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Əlaqələrimiz
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="news.html">Xəbərlər</a>
+                                <a class="dropdown-item" href="annoncement.html">Elanlar</a>
+                                <a class="dropdown-item" href="photogallery.html">Fotoqalereya</a>
+                                <a class="dropdown-item" href="videogallery.html">Videomateriallar</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Nəşrlər
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="online_apply.html">Müraciət etmək</a>
+                                <a class="dropdown-item" href="dinamic.html">Qəbul qrafiki</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                Xüsusi
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="online_apply.html">Müraciət etmək</a>
+                                <a class="dropdown-item" href="dinamic.html">Qəbul qrafiki</a>
+                            </div>
+                        </li>
+                        <li>
+                            <form class="form-inline my-2 my-lg-0">
+                                <button class="btn btn-search my-2 my-sm-0" type="submit">
+                                    <img src="./src/img/btn-search.svg" class="btn-search" alt="" />
+                                </button>
+                                <input class="form-control mr-sm-2 form-control-input" type="search"
+                                    placeholder="Axtarış" aria-label="Axtarış" />
+                            </form>
+                        </li>
+
+                    </ul>
+
+                    <form class="form-inline my-2 my-lg-0 form-without-nav">
+                        <button class="btn btn-search my-2 my-sm-0" type="submit">
+                            <img src="./src/img/btn-search.svg" class="btn-search" alt="" />
+                        </button>
+                        <input class="form-control mr-sm-2 form-control-input" type="search" placeholder="Axtarış"
+                            aria-label="Axtarış" />
+                    </form>
+                </div>
+            </div>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-lg nav header-navbar" data-toggle="sticky-onscroll">
+            <div class="container">
+
+                <form class="nav-search" role="search">
+                    <input class="input-search" type="search" placeholder="" aria-label="Search">
+                    <button class="form-btn" type="submit">
+                        <img src="./src/img/search.svg" alt="search">
+                    </button>
+                </form>
+
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
+                    <ul class="navbar-nav me-auto mb-lg-0">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Haqqımızda
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./static.html">Bölmə haqqında</a></li>
+                                <li><a class="dropdown-item" href="./management.html">Rəhbərlik</a></li>
+                                <li><a class="dropdown-item" href="./static.html">Struktur</a></li>
+                                <li><a class="dropdown-item" href="./static.html">İctimai təşkilat və şuralar</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Xəbərlər
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./laws.html">Konfranslar</a></li>
+                                <li><a class="dropdown-item" href="./laws.html">Tədbirlər</a></li>
+                                <li><a class="dropdown-item" href="./laws.html">Nəşrlər</a></li>
+                                <li><a class="dropdown-item" href="./laws.html">Yeniliklər</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Elanlar
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./state_property.html">Dövlət əmlakı</a></li>
+                                <li><a class="dropdown-item" href="./municipal_lands.html">Bələdiyyə torpaqları</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./enforcement_service.html">İcra xidmətinin
+                                        sifarişləri</a></li>
+                                <li><a class="dropdown-item" href="./enforcement_service.html">Digər hərraclar </a>
+                                </li>
+                                <li><a class="dropdown-item" href="./all_lots.html">Bütün lotlar </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Əlaqələr
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./news.html">Layihələr</a></li>
+                                <li><a class="dropdown-item" href="./announcements.html">Müqavilələr</a></li>
+                                <li><a class="dropdown-item" href="./laws.html">Patentlər </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Nəşrlər
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="./news.html">Monoqrafiya</a></li>
+                                <li><a class="dropdown-item" href="./announcements.html">Kitab</a></li>
+                                <li><a class="dropdown-item" href="./laws.html">Elmi əsərlər </a></li>
+                                <li><a class="dropdown-item" href="./articles_interviews.html">Axtarışlar</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Xüsusi
+                            </a>
+                          
+                        </li>
+                        <!-- <form class="d-flex menu-search" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Axtar..."
+                                    aria-label="Search">
+                                <button class="btn" type="submit">
+                                    <i class="fas fa-magnifying-glass"></i>
+                                </button>
+                            </form> -->
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 form-without-nav">
+                        <button class="btn btn-search my-2 my-sm-0" type="submit">
+                            <img src="./src/img/btn-search.svg" class="btn-search" alt="">
+                        </button>
+                        <input class="form-control mr-sm-2 form-control-input" type="search" placeholder="Axtarış"
+                            aria-label="Axtarış">
+                    </form>
+                </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <a id="button"></a>
+
+        <section class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="about-content">
+                            <h2 class="about-title">
+                                Haqqımızda
+                            </h2>
+                            <p class="about-text">
+                                Azərbaycan dünyanın ən qədim elm və mədəniyyət mərkəzlərindən biridir. Onun tarixi
+                                ərazisinin sakinləri minilliklər ərzində zəngin mədəni və maddi irs yaratmışlar. Qədim
+                                mədəniyyət abidələri arasında elmi əsərlərin də sayı az deyil.Azərbaycan elminin, onun
+                                intellektual dəyərlərinin milli sərvət kimi qəbul edilməsində Azərbaycan Xalq
+                                Cümhuriyyətinin (1918–20) mühüm rolu olmuşdur.
+                            </p>
+                            <a href="./grant_projects.html" class="about-more">
+                                Ətraflı
+                                <span class="about-arrow-icon">
+                                    <i class="fa-solid fa-angles-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="about-right">
+                            <img src="./src/img/about1.png" data-aos="fade-down" alt="about-img" class="about-img-top">
+
+                            <img src="./src/img/about2.png" alt="about-img" class="about-img-right">
+
+                            <img src="./src/img/about3.png" data-aos="fade-up" alt="about-img" class="about-img-bottom">
+
+                            <a href="./official_documents.html" class="official-documents" data-aos="fade-down">
+                                Rəsmi sənədlər
+                                <span class="official-documents-icon">
+                                    <i class="fa-solid fa-arrow-up"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-section">
+            <div class="container">
+                <div class="footer-flex">
+                    <div class="contact-information">
+                        <p class="contact-info-text">
+                            Əlaqə məlumatları:
+                        </p>
+                        <div class="footer-address">
+                            <span class="address-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <p class="address-name text-bottom">AZ7000, Naxçıvan şəhəri, Heydər Əliyev prospekti, 76   
+                            </p>
+                        </div>
+
+                        <div class="footer-address">
+                            <span class="address-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <p class="address-name text-bottom">(+994 36) 5446580   
+                            </p>
+                        </div>
+
+
+                        <div class="footer-address">
+                            <span class="address-icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+                            <p class="address-name text-bottom">www.ameanb.az
+                            </p>
+                        </div>
+
+
+                        <div class="footer-address">
+                            <span class="address-icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+                            <p class="address-name text-bottom">www.ameanb.az
+                            </p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="contact-information">
+                        <p class="contact-info-text">
+                            Əlaqə məlumatları:
+                        </p>
+                        <div class="footer-menu">
+
+                            <ul class="footer-menu-ul">
+                                <li class="footer-menu-li">
+                                    <a href="./grant_projects.html">
+                                        Haqqımızda
+                                    </a>
+                                </li>
+                                <li class="footer-menu-li">
+                                    <a href="./news.html">
+                                        Xəbərlər
+                                    </a>
+                                </li>
+                                <li class="footer-menu-li">
+                                    <a href="./">
+                                        Elanlar
+                                    </a>
+                                </li>
+                                <li class="footer-menu-li">
+                                    <a href="">
+                                        Əlaqələrimiz
+                                    </a>
+                                </li>
+                                <li class="footer-menu-li">
+                                    <a href="./publications.html">
+                                        Nəşrlər
+                                    </a>
+                                </li>
+                                <li class="footer-menu-li">
+                                    <a href="">
+                                        Xüsusi
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+
+                    <div class="contact-information">
+                        <p class="contact-info-text">
+                            Saytda axtarış:
+                        </p>
+                        <div class="footer-search">
+                            <form class="form-inline my-2 my-lg-0">
+                                <button class="btn btn-search my-2 my-sm-0" type="submit">
+                                    <img src="./src/img/btn-search.svg" class="btn-search footer-btn-search" alt="" />
+                                </button>
+                                <input class="form-control mr-sm-2 form-control-input footer-form-control" type="search"
+                                    placeholder="Axtarış" aria-label="Axtarış" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <p class="copyright-p">© 2023 Tərtibat və proqramlaşdırma
+                        <a href="https://nmincom.gov.az/" class="copyright-link">Naxçıvan Muxtar Respublikası Rəqəmsal
+                            İnkişaf və
+                            Nəqliyyat
+                            Nazirliyi
+                        </a>
+                    </p>
+                    <div class="footer-social-links">
+                        <ul class="header-ul footer-ul">
+                            <li class="social">
+                                <a href="">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="social">
+                                <a href="">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./src/js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <script src="./src/js/main.js"></script>
+
+
+    <script>
+        AOS.init();
+    </script>
+
+
+</body>
+
+</body>
+
+</html>
