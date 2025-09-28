@@ -128,7 +128,6 @@ ol.static-org-chart>li ol>li:last-of-type:after {
     width: 3px;
 }
 
-/*** PRIMARY ***/
 ol.static-org-chart>li>div {
     margin-left: 1em;
 }
@@ -158,7 +157,6 @@ ol.static-org-chart>li>div+div:after {
     width: 3px;
 }
 
-/*** SECONDARY ***/
 ol.static-org-chart>li>ol:before {
     left: 0;
     right: inherit;
@@ -281,7 +279,6 @@ ol.static-org-chart .staff_card+div {
     margin-top: 10px;
 }
 
-/*** MEDIA QUERIES ***/
 @media only screen and (max-width: 992px) {
     .structure {
         margin: 20px 0;
@@ -520,7 +517,7 @@ ol.static-org-chart .staff_card+div {
     ol.static-org-chart #first>li>div {
         height: 121px;
         width: 100%;
-        color: #fff;
+        color: var(--dateColor);
         background-color: var(--structureBg);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         color: var(--aboutMore);

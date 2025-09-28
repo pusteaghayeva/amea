@@ -7,14 +7,12 @@
 
 .news-demo {
     margin: 100px 0;
-    /* background-color: red; */
 }
 
 ol, ul {
     padding-left: 0;
 }
 
-/* left side */
 .post-meta ul li {
     list-style: none;
 }
@@ -71,8 +69,6 @@ ol, ul {
     background: linear-gradient(180deg, rgba(142, 142, 142, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
 }
 
-
-/* scroll */
 .post-list::-webkit-scrollbar {
     width: 8px;
     height: 2px !important;
@@ -102,9 +98,7 @@ ol, ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* background-color: var(--aboutMore); */
     padding: 10px;
-    /* height: 218px; */
 }
 
 
@@ -121,17 +115,14 @@ ol, ul {
     font-size: 20px;
     font-weight: 700;
     color: var(--dateColor);
-    /* max-height: 154px; */
     line-height: 1.4em;
     color: var(--aboutMore);
 
 }
 
-/* Xeberlər lentinin scrollbar-u */
 .post-list::-webkit-scrollbar {
     width: 18px;
     border-radius: 0;
-    /* burda istədiyin eni ver */
 }
 
 .post-list::-webkit-scrollbar-track {
@@ -143,17 +134,13 @@ ol, ul {
     border-radius: 0px;
     background: var(--aboutMore);
 }
-
-/* right */
 .news-right-side {
     padding: 31px;
 }
 
 .news-right-img {
     width: 100%;
-    /* width: 806px; */
     height: auto;
-    /* height: 569px; */
     object-fit: cover;
 }
 
@@ -168,7 +155,6 @@ ol, ul {
     font-size: 20px;
     font-weight: 400;
     color: var(--newsDateColor);
-    /* border-right: 1px solid var(--newsDateColor); */
     padding-right: 18px;
 }
 
@@ -191,7 +177,6 @@ ol, ul {
 }
 
 .like-blog {
-    /* background-color: transparent; */
     margin-left: 5px;
     font-size: 24px;
     color: var(--newsDateColor);
@@ -213,8 +198,6 @@ ol, ul {
     height: 40px;
 }
 
-.news-content {}
-
 .news-page-title {
     font-weight: 700;
     font-size: 24px;
@@ -228,7 +211,6 @@ ol, ul {
     margin: 20px 0;
 }
 
-/* gallery */
 *,
 *::before,
 *::after {
@@ -267,7 +249,6 @@ ol, ul {
 
 .main-gallery .card {
     color: #252a32;
-    /* border-radius: 5px; */
     background: #fff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
     border: 1px solid #C2C2C2;

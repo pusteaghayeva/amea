@@ -41,8 +41,6 @@ ul {
     background: var(--menuColor);
 }
 
-
-/* back to top */
 #button {
     display: inline-block;
     background-color: var(--aboutMore);
@@ -84,8 +82,6 @@ ul {
     opacity: 1;
     visibility: visible;
 }
-
-/* back to top */
 header {
     font-family: var(--fontMulish);
 }
@@ -507,11 +503,8 @@ header .navbar-nav .dropdown-item:hover {
         height: 20px;
         position: absolute;
         top: 50%;
-        /* ortalayıcı hissə */
         right: 5px;
-        /* sağdan məsafə */
         transform: translateY(-50%);
-        /* dikey ortalama */
         background: none;
         border: none;
         cursor: pointer;
