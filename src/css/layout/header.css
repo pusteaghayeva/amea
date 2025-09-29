@@ -55,7 +55,7 @@ ul {
         opacity .5s, visibility .5s;
     opacity: 0;
     visibility: hidden;
-    z-index: 1000;
+    z-index: 99999;
     border: 1px solid var(--dateColor);
 }
 

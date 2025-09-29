@@ -25,6 +25,12 @@ body {
 
 }
 
+.about-title {
+    font-family: var(--fontMulish);
+    font-weight: 700;
+    font-size: 40px;
+}
+
 .about .row {
     align-items: center;
 }
