@@ -82,6 +82,7 @@ ul {
     opacity: 1;
     visibility: visible;
 }
+
 header {
     font-family: var(--fontMulish);
 }
@@ -378,12 +379,11 @@ header {
 }
 
 
-
 header .navbar {
     position: relative;
     padding: 0;
     background-color: var(--aboutMore);
-    padding: 10px 0;
+    height: 54px;
 }
 
 header .navbar-nav {
@@ -609,12 +609,13 @@ header .navbar-nav .dropdown-menu {
         justify-content: center;
         width: 100%;
         margin-top: 0;
-        padding: 20px 0;
         border: 0;
         opacity: 0;
         z-index: -1;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         background-color: var(--dateColor);
+        box-shadow: 0px 4px 4px 0px #00000040;
+        height: 50px;
+
     }
 }
 
