@@ -117,7 +117,14 @@ header {
 .header-ul li {
     margin: 0 13px;
     text-decoration: none;
+}
 
+.header-ul li .lang.active{
+    background-color: var(--searchColor);
+    padding: 3px;
+    border: 1px solid var(--searchColor);
+    border-radius: 3px;
+    color: var(--headerBg);
 }
 
 .header-ul li a:hover {
