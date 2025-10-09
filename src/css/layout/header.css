@@ -516,9 +516,7 @@ header .navbar-nav .dropdown-item:hover {
         border: none;
         cursor: pointer;
     }
-
 }
-
 
 
 header .navbar-nav .nav-link {
@@ -528,6 +526,10 @@ header .navbar-nav .nav-link {
     font-size: 18px;
     color: var(--dateColor);
 }
+header .navbar-nav .nav-link.active {
+    color: rgb(185, 184, 184);
+}
+
 
 header .navbar-nav .nav-item:first-child {
     padding-left: 0;
