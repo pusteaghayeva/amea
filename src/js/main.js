@@ -338,21 +338,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // copy
 document.addEventListener("DOMContentLoaded", function () {
-  // Bütün copy şəkillərini tapırıq
   const copyIcons = document.querySelectorAll(".modal-other-img-copy");
 
   copyIcons.forEach(icon => {
     icon.addEventListener("click", function () {
-      // Eyni container-dəki (yəni div-dəki) mail linkini tapırıq
       const parent = icon.closest(".modal-other-contact");
       const emailLink = parent.querySelector(".modal-other-phone");
 
       if (emailLink) {
         const textToCopy = emailLink.textContent.trim();
 
-        // Clipboard-a kopyalama
         navigator.clipboard.writeText(textToCopy).then(() => {
-          // Uğur mesajı (məsələn qısa effekt)
           icon.style.opacity = "0.5";
           setTimeout(() => icon.style.opacity = "1", 500);
         }).catch(err => {
